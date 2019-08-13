@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 17:08:59 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/12 17:30:07 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/13 12:22:11 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		main(void)
 	add_end(&new, 20);
 	add_end(&new, 30);
 	add_end(&new, 40);
+	do_ra(new);
 	do_sa(new);
 	print_lst(new);
 	return (0);
