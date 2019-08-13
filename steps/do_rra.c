@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   do_rra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/13 12:57:33 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/13 12:56:43 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/13 13:06:39 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../libft/libft.h"
+#include "../includes/push_swap.h"
 
-typedef struct			s_stack
+void    do_rra(t_stack *lst)
 {
-	long int			num;
-	struct s_stack		*prev;
-	struct s_stack		*next;
-}						t_stack;
+    t_stack     *p;
+    long int    tmp;
 
-void	do_sa(t_stack *lst);
-void	do_ra(t_stack *lst);
-void	do_rra(t_stack *lst);
-
-#endif
+    p = lst;
+    if (lst != NULL)
+    {
+        while (p->next != NULL)
+            p = p->next;
+        tmp = p->num;
+        while (p->prev != NULL)
+        {
+            p->num = p->prev->num;
+            p = p->prev;
+        }
+        p->num = tmp;
+    }
+}
