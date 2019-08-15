@@ -13,13 +13,13 @@
 #include "../libft/libft.h"
 #include "../includes/push_swap.h"
 
-void    do_rra(t_stack *lst)
+void    do_rra(t_stack *stack)
 {
     t_stack     *p;
     long int    tmp;
 
-    p = lst;
-    if (lst != NULL)
+    p = stack;
+    if (stack != NULL)
     {
         while (p->next != NULL)
             p = p->next;

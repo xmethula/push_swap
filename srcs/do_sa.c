@@ -13,14 +13,14 @@
 #include "../libft/libft.h"
 #include "../includes/push_swap.h"
 
-void	do_sa(t_stack *lst)
+void	do_sa(t_stack *stack)
 {
 	long int	tmp;
 
-	if ((lst != NULL) && (lst->num != lst->next->num))
+	if ((stack != NULL) && (stack->num != stack->next->num))
 	{
-		tmp = lst->num;
-		lst->num = lst->next->num;
-		lst->next->num = tmp;
+		tmp = stack->num;
+		stack->num = stack->next->num;
+		stack->next->num = tmp;
 	}
 }

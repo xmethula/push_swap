@@ -54,6 +54,6 @@ int     main(void)
     fill_stack(&stack_a, 2);
     fill_stack(&stack_a, 1);
     print_stack(stack_a);
-    do_sa(stack_a);
+    stack_del_top(&stack_a);
     print_stack(stack_a);
 }

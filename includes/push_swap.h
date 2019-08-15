@@ -20,8 +20,9 @@ typedef struct			s_stack
 	struct s_stack		*next;
 }						t_stack;
 
-void	do_sa(t_stack *lst);
-void	do_ra(t_stack *lst);
-void	do_rra(t_stack *lst);
+void	do_sa(t_stack *stack);
+void	do_ra(t_stack *stack);
+void	do_rra(t_stack *stack);
+void	stack_del_top(t_stack **stack);
 
 #endif

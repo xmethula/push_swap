@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_ra.c                                            :+:      :+:    :+:   */
+/*   stack_del_top.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 08:34:49 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/13 12:48:43 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/15 13:57:55 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/15 13:57:59 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "../includes/push_swap.h"
 
-void    do_ra(t_stack *stack)
+void    stack_del_top(t_stack **stack)
 {
-	t_stack		*p;
-	long int	tmp;
+    t_stack     *tmp;
 
-	p = stack;
-	tmp = stack->num;
-	if (stack != NULL)
-	{
-		while (p->next != NULL)
-		{
-			p->num = p->next->num;
-			p = p->next;
-		}
-		p->num = tmp;
-	}
+    tmp = (*stack);
+    (*stack) = tmp->next;
+    (*stack)->prev = NULL;
+    tmp->next = NULL;
+    free(tmp);
 }
