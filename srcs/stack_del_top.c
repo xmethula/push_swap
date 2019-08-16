@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   stack_del_top.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 13:57:55 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/15 13:57:59 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/16 14:47:50 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,17 @@ void    stack_del_top(t_stack **stack)
 {
     t_stack     *tmp;
 
-    tmp = (*stack);
-    (*stack) = tmp->next;
-    (*stack)->prev = NULL;
-    tmp->next = NULL;
-    free(tmp);
+    if ((*stack) != NULL)
+    {
+        if (stack_len(*stack) == 1)
+            ft_memdel((void **)stack);
+        else
+        {
+            tmp = (*stack);
+            (*stack) = tmp->next;
+            (*stack)->prev = NULL;
+            tmp->next = NULL;
+            free(tmp);
+        }
+    }
 }

@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_pb.c                                            :+:      :+:    :+:   */
+/*   stack_len.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 17:27:29 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/16 08:37:45 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/16 14:23:25 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/16 14:26:52 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft/libft.h"
 #include "../includes/push_swap.h"
 
-void    do_pb(t_stack **stack_a, t_stack **stack_b)
+size_t      stack_len(t_stack *stack)
 {
-    long int    tmp;
+    size_t      len;
 
-    if ((*stack_a) != NULL)
+    len = 0;
+    while (stack != NULL)
     {
-        tmp = (*stack_a)->num;
-        stack_del_top(stack_a);
-        stack_add_top(stack_b, tmp);
+        len++;
+        stack = stack->next;
     }
+    return (len);
 }

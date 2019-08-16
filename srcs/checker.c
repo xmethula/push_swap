@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/15 17:12:26 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/16 14:43:46 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,11 @@ int     main(void)
     fill_stack(&stack_a, 2);
     fill_stack(&stack_a, 1);
     print_stack(stack_a);
-    stack_add_top(&stack_a, 4);
+    ft_putchar('\n');
+    do_rra(stack_a);
+    do_pb(&stack_a, &stack_b);
+    do_sa(stack_a);
+    do_pa(&stack_a, &stack_b);
     print_stack(stack_a);
     return (0);
 }
