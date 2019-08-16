@@ -13,7 +13,7 @@
 #include "../libft/libft.h"
 #include "../includes/push_swap.h"
 
-size_t      stack_len(t_stack *stack)
+size_t      stack_size(t_stack *stack)
 {
     size_t      len;
 

@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/16 17:31:51 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/16 20:37:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,16 +54,17 @@ int     main(void)
     fill_stack(&stack_a, 3);
     fill_stack(&stack_a, 2);
     fill_stack(&stack_a, 1);
-    print_stack(stack_a);
-    ft_putchar('\n');
     if (duplicates(stack_a))
-        ft_putendl("Yes");
-    else
-        ft_putendl("No");
-    /*do_rra(stack_a);
-    do_pb(&stack_a, &stack_b);
+    {
+        ft_putendl("Error");
+        return (0);
+    }
+    /*read steps from stdout using gnl with file descriptor of 0 */
+    do_ra(stack_a);
     do_sa(stack_a);
-    do_pa(&stack_a, &stack_b);
-    print_stack(stack_a);*/
+    if (is_sorted(stack_a))
+        ft_putendl("OK");
+    else
+        ft_putendl("KO");
     return (0);
 }
