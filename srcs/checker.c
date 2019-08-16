@@ -43,28 +43,41 @@ void    fill_stack(t_stack **stack, long int num)
     }
 }
 
-int     main(void)
+int     main(int argc, char **argv)
 {
     t_stack     *stack_a;
     t_stack     *stack_b;
+    int         i;
+    char        *line;
 
     stack_a = NULL;
     stack_b = NULL;
-
-    fill_stack(&stack_a, 3);
-    fill_stack(&stack_a, 2);
-    fill_stack(&stack_a, 1);
-    if (duplicates(stack_a))
+    i = 1;
+    if (argc > 2)
     {
-        ft_putendl("Error");
-        return (0);
+        while (i < argc)
+        {
+            fill_stack(&stack_a, ft_atoi(argv[i]));
+            i++;
+        }
+        if (duplicates(stack_a))
+        {
+            ft_putendl("Error");
+            return (0);
+        }
+        while (get_next_line(0, &line))
+        {
+            if (ft_strcmp(line, "ra") == 0)
+                do_ra(stack_a);
+            else if (ft_strcmp(line, "sa") == 0)
+                do_sa(stack_a);
+        }
+        if (is_sorted(stack_a))
+            ft_putendl("OK");
+        else
+        {
+            ft_putendl("KO");
+        }
     }
-    /*read steps from stdout using gnl with file descriptor of 0 */
-    do_ra(stack_a);
-    do_sa(stack_a);
-    if (is_sorted(stack_a))
-        ft_putendl("OK");
-    else
-        ft_putendl("KO");
     return (0);
 }
