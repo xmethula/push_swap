@@ -28,7 +28,7 @@ void	do_pb(t_stack **stack_a, t_stack **stack_b);
 void	stack_del_top(t_stack **stack);
 void	stack_add_top(t_stack **stack, long int num);
 
-size_t	stack_len(t_stack *stack);
+size_t	stack_size(t_stack *stack);
 int		duplicates(t_stack *stack);
 
 #endif

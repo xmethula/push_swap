@@ -19,7 +19,7 @@ void    stack_del_top(t_stack **stack)
 
     if ((*stack) != NULL)
     {
-        if (stack_len(*stack) == 1)
+        if (stack_size(*stack) == 1)
             ft_memdel((void **)stack);
         else
         {
