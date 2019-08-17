@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/17 15:53:36 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/17 16:38:37 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ typedef struct			s_stack
 }						t_stack;
 
 void		do_sa(t_stack *stack);
+void		do_ss(t_stack *stack_a, t_stack *stack_b);
 void		do_ra(t_stack *stack);
+void		do_rr(t_stack *stack_a, t_stack *stack_b);
 void		do_rra(t_stack *stack);
+void		do_rrr(t_stack *stack_a, t_stack *stack_b);
 void		do_pa(t_stack **stack_a, t_stack **stack_b);
 void		do_pb(t_stack **stack_a, t_stack **stack_b);
 void		stack_del_top(t_stack **stack);
