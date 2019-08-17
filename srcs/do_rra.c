@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 12:56:43 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/13 13:06:39 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/17 17:19:30 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void    do_rra(t_stack *stack)
     long int    tmp;
 
     p = stack;
-    if (stack != NULL)
+    if (stack->next != NULL)
     {
         while (p->next != NULL)
             p = p->next;

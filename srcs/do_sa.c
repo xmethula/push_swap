@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 17:09:23 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/17 16:19:48 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/17 17:13:05 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	do_sa(t_stack *stack)
 {
 	long int	tmp;
 
-	if ((stack != NULL) && (stack->num != stack->next->num))
+	if ((stack->next != NULL) && (stack->num != stack->next->num))
 	{
 		tmp = stack->num;
 		stack->num = stack->next->num;
