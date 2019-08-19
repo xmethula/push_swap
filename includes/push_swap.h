@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 08:56:35 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/19 13:00:35 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,12 @@ void		stack_del_top(t_stack **stack);
 void		stack_add_top(t_stack **stack, long int num);
 void		fill_stack(int argc, char **argv, t_stack **stack);
 void		read_stdout(t_stack **stack_a, t_stack **stack_b);
+void		display_stack(t_stack *stack);
 
 size_t		stack_len(t_stack *stack);
 int			duplicates(t_stack *stack);
 int			is_sorted(t_stack *stack);
+
+void		sort_3_nbr(t_stack *stack);
 
 #endif
