@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_pb.c                                            :+:      :+:    :+:   */
+/*   do_rra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 17:27:29 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/16 08:37:45 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/13 12:56:43 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/19 08:45:39 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
-void    do_pb(t_stack **stack_a, t_stack **stack_b)
+void    do_rra(t_stack *stack)
 {
+    t_stack     *p;
     long int    tmp;
 
-    if ((*stack_a) != NULL)
+    p = stack;
+    if (stack->next != NULL)
     {
-        tmp = (*stack_a)->num;
-        stack_del_top(stack_a);
-        stack_add_top(stack_b, tmp);
+        while (p->next != NULL)
+            p = p->next;
+        tmp = p->num;
+        while (p->prev != NULL)
+        {
+            p->num = p->prev->num;
+            p = p->prev;
+        }
+        p->num = tmp;
     }
 }

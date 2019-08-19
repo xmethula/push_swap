@@ -1,32 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_ra.c                                            :+:      :+:    :+:   */
+/*   do_rrr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/13 08:34:49 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/17 17:19:08 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/17 16:35:42 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/19 08:45:57 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
-void    do_ra(t_stack *stack)
+void    do_rrr(t_stack *stack_a, t_stack *stack_b)
 {
-	t_stack		*p;
-	long int	tmp;
-
-	p = stack;
-	tmp = stack->num;
-	if (stack->next != NULL)
-	{
-		while (p->next != NULL)
-		{
-			p->num = p->next->num;
-			p = p->next;
-		}
-		p->num = tmp;
-	}
+    do_rra(stack_a);
+    do_rra(stack_b);
 }

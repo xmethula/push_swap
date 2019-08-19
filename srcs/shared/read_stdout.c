@@ -6,12 +6,12 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/17 16:35:25 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/19 08:49:12 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
 static void     do_steps(char *str, t_stack **stack_a, t_stack **stack_b)
 {

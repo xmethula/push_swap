@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   display_stack.c                                    :+:      :+:    :+:   */
+/*   do_rr.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/17 17:22:13 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/17 20:53:13 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/17 16:25:34 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/19 08:45:25 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
-void	display_stack(t_stack *stack)
+void    do_rr(t_stack *stack_a, t_stack *stack_b)
 {
-	while (stack != NULL)
-	{
-		ft_putnbr_endl(stack->num);
-		stack = stack->next;
-	}
+    do_ra(stack_a);
+    do_ra(stack_b);
 }

@@ -6,12 +6,12 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 17:01:07 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/15 17:11:06 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/19 08:49:36 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
 void    stack_add_top(t_stack **stack, long int num)
 {

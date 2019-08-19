@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   duplicates.c                                       :+:      :+:    :+:   */
+/*   stack_del_top.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/16 16:09:11 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/16 16:13:42 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/15 13:57:55 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/19 08:56:17 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft/libft.h"
-#include "../includes/push_swap.h"
+#include "../../libft/libft.h"
+#include "../../includes/push_swap.h"
 
-int     duplicates(t_stack *stack)
+void    stack_del_top(t_stack **stack)
 {
-    t_stack     *p;
-    t_stack     *q;
+    t_stack     *tmp;
 
-    p = stack;
-    while (p != NULL)
+    if ((*stack) != NULL)
     {
-        q = p->next;
-        while (q != NULL)
+        if (stack_len(*stack) == 1)
+            ft_memdel((void **)stack);
+        else
         {
-            if (p->num == q->num)
-                return (1);
-            q = q->next;
+            tmp = (*stack);
+            (*stack) = tmp->next;
+            (*stack)->prev = NULL;
+            tmp->next = NULL;
+            free(tmp);
         }
-        p = p->next;
     }
-    return (0);
 }
