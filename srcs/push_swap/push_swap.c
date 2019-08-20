@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 15:13:11 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/20 17:47:09 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,18 @@ void    add_end(t_stack **stack, long int num)
 int     main(void)
 {
     t_stack     *stack_a;
+	t_stack		*stack_b;
     
     stack_a = NULL;
-    add_end(&stack_a, 5);
-    add_end(&stack_a, 1);
-    add_end(&stack_a, 7);
+	stack_b = NULL;
+    add_end(&stack_a, 4);
+    add_end(&stack_a, 2);
+   	add_end(&stack_a, 3);
+	add_end(&stack_a, 1);
     display_stack(stack_a);
-    sort_3_nbr(stack_a);
+    //sort_4(&stack_a, &stack_b);
     ft_putchar('\n');
-    display_stack(stack_a);
+    //display_stack(stack_a);
+	ft_putnbr_endl(find_smallest(stack_a));
     return (0);
 }
