@@ -3,17 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   sort_5_or_less.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/20 17:30:58 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/21 16:20:36 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-void	sort_3(t_stack *stack)
+static void		sort_2(t_stack *stack)
+{
+	if (stack->num > stack->next->num)
+		do_sa(stack);
+}
+
+static void		sort_3(t_stack *stack)
 {
 	if ((stack->num > stack->next->num) &&
 		(stack->num < stack->next->next->num))
@@ -38,7 +44,7 @@ void	sort_3(t_stack *stack)
 	}
 }
 
-void	sort_4(t_stack **stack_a, t_stack **stack_b)
+static void		sort_4(t_stack **stack_a, t_stack **stack_b)
 {
 	long int	smallest;
 	t_stack		*i;
@@ -50,4 +56,14 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 	do_pb(stack_a, stack_b);
 	sort_3(*stack_a);
 	do_pa(stack_a, stack_b);
+}
+
+void			sort_5_or_less(t_stack **stack_a, t_stack **stack_b)
+{
+	if (stack_len(*stack_a) == 2)
+		sort_2(*stack_a);
+	else if (stack_len(*stack_a) == 3)
+		sort_3(*stack_a);
+	else if (stack_len(*stack_a) == 4)
+		sort_4(stack_a, stack_b);
 }

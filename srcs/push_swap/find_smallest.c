@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   find_smallest.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 16:38:52 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/20 17:48:53 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/21 12:36:07 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ long int		find_smallest(t_stack *stack)
 
 	smallest = stack->num;
 	i = stack->next;
-	while (i->next != NULL)
+	while (i != NULL)
 	{
 		if (i->num < smallest)
 			smallest = i->num;
