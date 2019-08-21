@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/20 17:19:18 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/21 16:19:44 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,8 @@ size_t		stack_len(t_stack *stack);
 int			duplicates(t_stack *stack);
 int			is_sorted(t_stack *stack);
 
-void		sort_3(t_stack *stack);
-void		sort_4(t_stack **stack_a, t_stack **stack_b);
+
+void		sort_5_or_less(t_stack **stack_a, t_stack **stack_b);
 long int	find_smallest(t_stack *stack);
 
 #endif
