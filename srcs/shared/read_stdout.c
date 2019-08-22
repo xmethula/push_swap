@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 08:49:12 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/22 08:22:43 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@
 static void     do_steps(char *str, t_stack **stack_a, t_stack **stack_b)
 {
     if (ft_strequ(str, "sa"))
-        do_sa(*stack_a);
+        do_sa(*stack_a, 0);
     else if (ft_strequ(str, "sb"))
-        do_sa(*stack_b);
+        do_sb(*stack_b, 0);
     else if (ft_strequ(str, "ss"))
-        do_ss(*stack_a, *stack_b);
+        do_ss(*stack_a, *stack_b, 0);
     else if (ft_strequ(str, "pa"))
-        do_pa(stack_a, stack_b);
+        do_pa(stack_a, stack_b, 0);
     else if (ft_strequ(str, "pb"))
-        do_pb(stack_a, stack_b);
+        do_pb(stack_a, stack_b, 0);
     else if (ft_strequ(str, "ra"))
-        do_ra(*stack_a);
+        do_ra(*stack_a, 0);
     else if (ft_strequ(str, "rb"))
-        do_ra(*stack_b);
+        do_rb(*stack_b, 0);
     else if (ft_strequ(str, "rr"))
-        do_rr(*stack_a, *stack_b);
+        do_rr(*stack_a, *stack_b, 0);
     else if (ft_strequ(str, "rra"))
-        do_rra(*stack_a);
+        do_rra(*stack_a, 0);
     else if (ft_strequ(str, "rrb"))
-        do_rra(*stack_b);
+        do_rrb(*stack_b, 0);
     else if (ft_strequ(str, "rrr"))
-        do_rrr(*stack_a, *stack_b);
+        do_rrr(*stack_a, *stack_b, 0);
     else
     {
         ft_putendl("Error");

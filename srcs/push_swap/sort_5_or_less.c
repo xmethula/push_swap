@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/21 16:20:36 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/22 08:10:37 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,31 @@
 static void		sort_2(t_stack *stack)
 {
 	if (stack->num > stack->next->num)
-		do_sa(stack);
+		do_sa(stack, 1);
 }
 
 static void		sort_3(t_stack *stack)
 {
 	if ((stack->num > stack->next->num) &&
 		(stack->num < stack->next->next->num))
-		do_sa(stack);
+		do_sa(stack, 1);
 	else if ((stack->num > stack->next->num) &&
 			(stack->next->num < stack->next->next->num))
-		do_ra(stack);
+		do_ra(stack, 1);
 	else if ((stack->num > stack->next->num) &&
 			(stack->next->num > stack->next->next->num))
 	{
-		do_sa(stack);
-		do_rra(stack);
+		do_sa(stack, 1);
+		do_rra(stack, 1);
 	}
 	else if ((stack->num < stack->next->num) &&
 			(stack->num > stack->next->next->num))
-		do_rra(stack);
+		do_rra(stack, 1);
 	else if ((stack->num < stack->next->num) &&
 			(stack->next->num > stack->next->next->num))
 	{
-		do_sa(stack);
-		do_ra(stack);
+		do_sa(stack, 1);
+		do_ra(stack, 1);
 	}
 }
 
@@ -52,10 +52,10 @@ static void		sort_4(t_stack **stack_a, t_stack **stack_b)
 	smallest = find_smallest(*stack_a);
 	i = (*stack_a);
 	while (i->num != smallest)
-		do_ra(*stack_a);
-	do_pb(stack_a, stack_b);
+		do_ra(*stack_a, 1);
+	do_pb(stack_a, stack_b, 1);
 	sort_3(*stack_a);
-	do_pa(stack_a, stack_b);
+	do_pa(stack_a, stack_b, 1);
 }
 
 void			sort_5_or_less(t_stack **stack_a, t_stack **stack_b)

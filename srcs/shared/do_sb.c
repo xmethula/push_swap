@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   do_pa.c                                            :+:      :+:    :+:   */
+/*   do_sb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 17:19:26 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/22 07:54:14 by xmethula         ###   ########.fr       */
+/*   Created: 2019/08/22 08:14:36 by xmethula          #+#    #+#             */
+/*   Updated: 2019/08/22 08:15:28 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-void    do_pa(t_stack **stack_a, t_stack **stack_b, int flag)
+void	do_sb(t_stack *stack, int flag)
 {
-    long int    tmp;
+	long int	tmp;
 
-    if ((*stack_b) != NULL)
-    {
-        tmp = (*stack_b)->num;
-        stack_del_top(stack_b);
-        stack_add_top(stack_a, tmp);
-    }
-    if (flag)
-        ft_putendl("pa");
+	if ((stack->next != NULL) && (stack->num != stack->next->num))
+	{
+		tmp = stack->num;
+		stack->num = stack->next->num;
+		stack->next->num = tmp;
+	}
+	if (flag)
+		ft_putendl("sb");
 }

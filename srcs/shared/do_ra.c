@@ -6,14 +6,14 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/13 08:34:49 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 08:45:10 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/22 07:56:43 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-void    do_ra(t_stack *stack)
+void    do_ra(t_stack *stack, int flag)
 {
 	t_stack		*p;
 	long int	tmp;
@@ -29,4 +29,6 @@ void    do_ra(t_stack *stack)
 		}
 		p->num = tmp;
 	}
+	if (flag)
+		ft_putendl("ra");
 }
