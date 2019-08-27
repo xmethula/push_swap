@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 16:38:52 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/21 12:36:07 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/27 09:39:06 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,28 @@ long int		find_smallest(t_stack *stack)
 		i = i->next;
 	}
 	return (smallest);
+}
+
+int				small_position(t_stack *stack)
+{
+	int			smallest;
+	int			position;
+	int			ctr;
+	t_stack		*i;
+
+	smallest = stack->num;
+	i = stack->next;
+	position = 1;
+	ctr = 2;
+	while (i != NULL)
+	{
+		if (i->num < smallest)
+		{
+			smallest = i->num;
+			position = ctr;
+		}
+		i = i->next;
+		ctr++;
+	}
+	return (position);
 }
