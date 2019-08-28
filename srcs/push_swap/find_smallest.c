@@ -6,16 +6,16 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 16:38:52 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/27 09:39:06 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 08:51:50 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-long int		find_smallest(t_stack *stack)
+int				find_smallest(t_stack *stack)
 {
-	long int	smallest;
+	int			smallest;
 	t_stack		*i;
 
 	smallest = stack->num;

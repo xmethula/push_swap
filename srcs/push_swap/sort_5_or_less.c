@@ -6,20 +6,20 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/27 10:07:53 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 08:54:21 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-static void		sort_2(t_stack *stack)
+/*static void		sort_2(t_stack *stack)
 {
 	if (stack->num > stack->next->num)
 		do_sa(stack, 1);
 }
 
-static void		sort_3(t_stack *stack)
+void			sort_3(t_stack *stack)
 {
 	if ((stack->num > stack->next->num) &&
 		(stack->num < stack->next->next->num))
@@ -46,7 +46,7 @@ static void		sort_3(t_stack *stack)
 
 static void		sort_4(t_stack **stack_a, t_stack **stack_b)
 {
-	long int	smallest;
+	int			smallest;
 	t_stack		*i;
 
 	smallest = find_smallest(*stack_a);
@@ -65,7 +65,7 @@ static void		sort_4(t_stack **stack_a, t_stack **stack_b)
 
 static void		sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-	long int	smallest;
+	int			smallest;
 	t_stack		*i;
 
 	smallest = find_smallest(*stack_a);
@@ -103,4 +103,4 @@ void			sort_5_or_less(t_stack **stack_a, t_stack **stack_b)
 		sort_4(stack_a, stack_b);
 	else if (stack_len(*stack_a) == 5)
 		sort_5(stack_a, stack_b);
-}
+}*/

@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/27 09:56:37 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 08:52:49 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 static void     push_swap(t_stack **stack_a, t_stack **stack_b)
 {
-    sort_5_or_less(stack_a, stack_b);
+    sort(stack_a, stack_b);
 }
 
 int             main(int argc, char **argv)
