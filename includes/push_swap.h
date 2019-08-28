@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/27 09:43:57 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:56:14 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 typedef struct			s_stack
 {
-	long int			num;
+	int					num;
 	struct s_stack		*prev;
 	struct s_stack		*next;
 }						t_stack;
@@ -32,9 +32,9 @@ void		do_rrr(t_stack *stack_a, t_stack *stack_b, int flag);
 void		do_pa(t_stack **stack_a, t_stack **stack_b, int flag);
 void		do_pb(t_stack **stack_a, t_stack **stack_b, int flag);
 void		stack_del_top(t_stack **stack);
-void		stack_add_top(t_stack **stack, long int num);
+void		stack_add_top(t_stack **stack, int num);
 void		fill_stack(int argc, char **argv, t_stack **stack);
-void		read_stdout(t_stack **stack_a, t_stack **stack_b);
+void		read_stdin(t_stack **stack_a, t_stack **stack_b);
 void		display_stack(t_stack *stack);
 
 size_t		stack_len(t_stack *stack);
