@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 17:27:29 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/22 07:55:23 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:47:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void    do_pb(t_stack **stack_a, t_stack **stack_b, int flag)
 {
-    long int    tmp;
+    int    tmp;
 
     if ((*stack_a) != NULL)
     {

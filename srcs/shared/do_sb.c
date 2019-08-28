@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 08:14:36 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/22 08:15:28 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:49:46 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	do_sb(t_stack *stack, int flag)
 {
-	long int	tmp;
+	int		tmp;
 
 	if ((stack->next != NULL) && (stack->num != stack->next->num))
 	{

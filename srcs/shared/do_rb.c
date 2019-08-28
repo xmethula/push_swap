@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/22 08:16:45 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/22 08:17:29 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:48:26 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void    do_rb(t_stack *stack, int flag)
 {
 	t_stack		*p;
-	long int	tmp;
+	int			tmp;
 
 	p = stack;
 	tmp = stack->num;

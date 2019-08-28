@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_stdout.c                                      :+:      :+:    :+:   */
+/*   read_stdin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/22 08:22:43 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/28 07:55:58 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void     do_steps(char *str, t_stack **stack_a, t_stack **stack_b)
     }
 }
 
-void            read_stdout(t_stack **stack_a, t_stack **stack_b)
+void            read_stdin(t_stack **stack_a, t_stack **stack_b)
 {
     char        *line;
 
