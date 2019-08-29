@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/28 08:52:49 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/29 16:45:23 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,18 @@ int             main(int argc, char **argv)
 	if (argc > 2)
 	{
 		fill_stack(argc, argv, &stack_a);
-		if (duplicates(stack_a))
+		/*if (duplicates(stack_a))
         {
             ft_putendl("Error");
 			return (0);
         }
         if (is_sorted(stack_a))
             return (0);
-        push_swap(&stack_a, &stack_b);
+        push_swap(&stack_a, &stack_b);*/
+        display_stack(stack_a);
+        ft_putchar('\n');
+        ft_putnbr_endl(find_small_big(stack_a, 2));
+        ft_putnbr_endl(find_small_big(stack_a, 3));
 	}
 	return (0);
 }

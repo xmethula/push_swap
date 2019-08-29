@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/28 08:54:21 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/29 15:52:58 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ static void		sort_4(t_stack **stack_a, t_stack **stack_b)
 	int			smallest;
 	t_stack		*i;
 
-	smallest = find_smallest(*stack_a);
+	smallest = find_small_nbr(*stack_a);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_position(*stack_a) <= 2)
+		if (small_nbr_pos(*stack_a) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);
@@ -68,21 +68,21 @@ static void		sort_5(t_stack **stack_a, t_stack **stack_b)
 	int			smallest;
 	t_stack		*i;
 
-	smallest = find_smallest(*stack_a);
+	smallest = find_small_pos(*stack_a);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_position(*stack_a) <= 2)
+		if (small_nbr_pos(*stack_a) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);
 	}
 	do_pb(stack_a, stack_b, 1);
-	smallest = find_smallest(*stack_a);
+	smallest = find_small_nbr(*stack_a);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_position(*stack_a) <= 2)
+		if (small_nbr_pos(*stack_a) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);

@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 08:08:14 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/28 14:50:38 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/29 16:43:45 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,10 +54,10 @@ static void     sort_3_above(t_stack **stack_a, t_stack **stack_b)
     while (len_a > 3)
     {
         i = (*stack_a);
-        smallest = find_smallest(*stack_a);
+        smallest = find_small_big(*stack_a, 0);
         while (i->num != smallest)
         {
-            if (small_position(*stack_a) <= (stack_len(*stack_a) / 2))
+            if (find_small_big(*stack_a, 1) <= (stack_len(*stack_a) / 2))
                 do_ra(*stack_a, 1);
             else
                 do_rra(*stack_a, 1);
