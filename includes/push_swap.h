@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/28 08:52:17 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/08/29 16:33:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int			is_sorted(t_stack *stack);
 
 void		sort_5_or_less(t_stack **stack_a, t_stack **stack_b);
 void        sort(t_stack **stack_a, t_stack **stack_b);
-int			find_smallest(t_stack *stack);
-int			small_position(t_stack *stack);
+int			find_small_big(t_stack *stack, int flag);
 
 #endif
