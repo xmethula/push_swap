@@ -46,5 +46,6 @@ int			is_sorted(t_stack *stack);
 void		sort_5_or_less(t_stack **stack_a, t_stack **stack_b);
 void        sort(t_stack **stack_a, t_stack **stack_b);
 int			find_small_big(t_stack *stack, int flag);
+void		interval(t_stack **stack_a, t_stack **stack_b, int min, int max);
 
 #endif
