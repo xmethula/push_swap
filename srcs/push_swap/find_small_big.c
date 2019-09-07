@@ -13,57 +13,57 @@
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-static int		small_nbr_pos(t_stack *stack, int flag)
+static int		small(t_stack *stack, int flag)
 {
-	int			small;
+	int			nbr;
 	int			pos;
 	int			ctr;
 	t_stack		*i;
 
-	small = stack->num;
+	nbr = stack->num;
 	i = stack->next;
 	pos = 1;
 	ctr = 2;
 	while (i != NULL)
 	{
-		if (i->num < small)
+		if (i->num < nbr)
 		{
-			small = i->num;
+			nbr = i->num;
 			pos = ctr;
 		}
 		i = i->next;
 		ctr++;
 	}
 	if (flag == 0)
-		return (small);
+		return (nbr);
 	else if (flag == 1)
 		return (pos);
 	return (0);
 }
 
-static int		big_nbr_pos(t_stack *stack, int flag)
+static int		big(t_stack *stack, int flag)
 {
-	int			big;
+	int			nbr;
 	int			pos;
 	int			ctr;
 	t_stack		*i;
 
-	big = stack->num;
+	nbr = stack->num;
 	i = stack->next;
 	pos = 1;
 	ctr = 2;
 	while (i != NULL)
 	{
-		if (i->num > big)
+		if (i->num > nbr)
 		{
-			big = i->num;
+			nbr = i->num;
 			pos = ctr;
 		}
 		i = i->next;
 		ctr++;
 	}
 	if (flag == 2)
-		return (big);
+		return (nbr);
 	else if (flag == 3)
 		return (pos);
 	return (0);
@@ -72,12 +72,12 @@ static int		big_nbr_pos(t_stack *stack, int flag)
 int			find_small_big(t_stack *stack, int flag)
 {
 	if (flag == 0)
-		return (small_nbr_pos(stack, flag));
+		return (small(stack, flag));
 	else if (flag == 1)
-		return (small_nbr_pos(stack, flag));
+		return (small(stack, flag));
 	else if (flag == 2)
-		return (big_nbr_pos(stack, flag));
+		return (big(stack, flag));
 	else if (flag == 3)
-		return (big_nbr_pos(stack, flag));
+		return (big(stack, flag));
 	return (0);
 }
