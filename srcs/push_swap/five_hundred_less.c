@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 08:35:33 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/09 12:11:53 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/09 14:08:19 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,54 +58,3 @@ void			sort_five_hundred_less(t_stack **stack_a, t_stack **stack_b)
 		len--;
 	}
 }
-
-/*
-void            add_ten(t_stack *stack)
-{
-    t_stack     *p;
-
-    p = stack;
-    while (p != NULL)
-    {
-        p->num = p->num + 50;
-        p = p->next;
-    }
-}
-
-void            print(t_stack *stack)
-{
-    while (stack != NULL)
-    {
-        ft_putnbr(stack->num);
-        ft_putchar(' ');
-        stack = stack->next;
-    }
-    ft_putchar('\n');
-}
-
-int             main(int argc, char **argv)
-{
-    t_stack     *stack_a;
-	t_stack		*stack_b;
-    
-    stack_a = NULL;
-	stack_b = NULL;
-	if (argc > 2)
-	{
-		fill_stack(argc, argv, &stack_a);
-		if (duplicates(stack_a))
-        {
-            ft_putendl("Error");
-			return (0);
-        }
-        if (is_sorted(stack_a))
-            return (0);
-        sort_hundred_less(&stack_a, &stack_b);
-        print(stack_a);
-        ft_putchar('\n');
-        add_ten(stack_a);
-        print(stack_a);
-
-	}
-	return (0);
-}*/

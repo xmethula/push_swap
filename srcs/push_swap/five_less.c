@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/09 11:48:11 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/09 14:39:54 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void		sort_two(t_stack *stack)
 		do_sa(stack, 1);
 }
 
-void			sort_three(t_stack *stack)
+static void		sort_three(t_stack *stack)
 {
 	if ((stack->num > stack->next->num) &&
 		(stack->num < stack->next->next->num))
