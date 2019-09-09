@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_5_or_less.c                                   :+:      :+:    :+:   */
+/*   five_less.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/29 15:52:58 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/09 11:48:11 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-/*static void		sort_2(t_stack *stack)
+static void		sort_two(t_stack *stack)
 {
 	if (stack->num > stack->next->num)
 		do_sa(stack, 1);
 }
 
-void			sort_3(t_stack *stack)
+void			sort_three(t_stack *stack)
 {
 	if ((stack->num > stack->next->num) &&
 		(stack->num < stack->next->next->num))
@@ -44,63 +44,63 @@ void			sort_3(t_stack *stack)
 	}
 }
 
-static void		sort_4(t_stack **stack_a, t_stack **stack_b)
+static void		sort_four(t_stack **stack_a, t_stack **stack_b)
 {
 	int			smallest;
 	t_stack		*i;
 
-	smallest = find_small_nbr(*stack_a);
+	smallest = find_small_big(*stack_a, 0);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_nbr_pos(*stack_a) <= 2)
+		if (find_small_big(*stack_a, 1) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);
 	}
 	do_pb(stack_a, stack_b, 1);
-	sort_3(*stack_a);
+	sort_three(*stack_a);
 	do_pa(stack_a, stack_b, 1);
 }
 
-static void		sort_5(t_stack **stack_a, t_stack **stack_b)
+static void		sort_five(t_stack **stack_a, t_stack **stack_b)
 {
 	int			smallest;
 	t_stack		*i;
 
-	smallest = find_small_pos(*stack_a);
+	smallest = find_small_big(*stack_a, 0);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_nbr_pos(*stack_a) <= 2)
+		if (find_small_big(*stack_a, 1) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);
 	}
 	do_pb(stack_a, stack_b, 1);
-	smallest = find_small_nbr(*stack_a);
+	smallest = find_small_big(*stack_a, 0);
 	i = (*stack_a);
 	while (i->num != smallest)
 	{
-		if (small_nbr_pos(*stack_a) <= 2)
+		if (find_small_big(*stack_a, 1) <= 2)
 			do_ra(*stack_a, 1);
 		else
 			do_rra(*stack_a, 1);
 	}
 	do_pb(stack_a, stack_b, 1);
-	sort_3(*stack_a);
+	sort_three(*stack_a);
 	do_pa(stack_a, stack_b, 1);
 	do_pa(stack_a, stack_b, 1);
 }
 
-void			sort_5_or_less(t_stack **stack_a, t_stack **stack_b)
+void			sort_five_less(t_stack **stack_a, t_stack **stack_b)
 {
 	if (stack_len(*stack_a) == 2)
-		sort_2(*stack_a);
+		sort_two(*stack_a);
 	else if (stack_len(*stack_a) == 3)
-		sort_3(*stack_a);
+		sort_three(*stack_a);
 	else if (stack_len(*stack_a) == 4)
-		sort_4(stack_a, stack_b);
+		sort_four(stack_a, stack_b);
 	else if (stack_len(*stack_a) == 5)
-		sort_5(stack_a, stack_b);
-}*/
+		sort_five(stack_a, stack_b);
+}
