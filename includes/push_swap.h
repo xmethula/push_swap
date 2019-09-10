@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/12 15:59:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/09 15:12:38 by xmethula         ###   ########.fr       */
+/*   Created: 2019/09/10 10:44:19 by xmethula          #+#    #+#             */
+/*   Updated: 2019/09/10 14:25:34 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ size_t		stack_len(t_stack *stack);
 int			duplicates(t_stack *stack);
 int			is_sorted(t_stack *stack);
 
-int			find_small_big(t_stack *stack, int flag);
+int			find_small_big(t_stack *stack, char *flag);
 void		interval(t_stack **stack_a, t_stack **stack_b, int min, int max);
 void		sort_five_less(t_stack **stack_a, t_stack **stack_b);
 void		sort_hundred_less(t_stack **stack_a, t_stack **stack_b);
