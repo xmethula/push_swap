@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/06/03 09:42:44 by xmethula          #+#    #+#              #
-#    Updated: 2019/08/12 11:59:26 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/10 16:18:23 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ FILES		= ft_memset.c \
 			  ft_putendl_fd.c \
 			  ft_putnbr_fd.c \
 			  ft_putnbr_endl.c \
+			  ft_isnbr.c \
 			  get_next_line.c
 OBJ			= $(FILES:%.c=%.o)
 
