@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 08:46:52 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/10 16:29:13 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,25 @@ static void     add_end(t_stack **stack, long int num)
 
 void            fill_stack(int argc, char **argv, t_stack **stack)
 {
+	char		**arr;
     int         i;
+	int			j;
 
     i = 1;
     while (i < argc)
     {
-        add_end(stack, ft_atoi(argv[i]));
-        i++;
+		j = 0;
+		arr = ft_strsplit(argv[i], ' ');
+		while (arr[j] != NULL)
+		{
+			if (ft_isnbr(arr[j]) != 1)
+			{
+				ft_putendl("Error");
+				exit(0);
+			}
+        	add_end(stack, ft_atoi(arr[j]));
+        	j++;
+		}
+		i++;
     }
 }

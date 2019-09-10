@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/09 14:19:26 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/10 15:56:24 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int             main(int argc, char **argv)
     
     stack_a = NULL;
 	stack_b = NULL;
-	if (argc > 2)
+	if (argc > 1)
 	{
 		fill_stack(argc, argv, &stack_a);
 		if (duplicates(stack_a))

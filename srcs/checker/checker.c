@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/28 07:56:43 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/10 14:27:49 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		main(int argc, char **argv)
 
 	stack_a = NULL;
 	stack_b = NULL;
-	if (argc > 2)
+	if (argc > 1)
 	{
 		fill_stack(argc, argv, &stack_a);
 		len = stack_len(stack_a);

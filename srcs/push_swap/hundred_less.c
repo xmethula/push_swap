@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:54:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/09 09:26:23 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/10 12:43:43 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ static void		create_five_chunks(t_stack **stack_a, t_stack **stack_b)
 	int			big;
 	int			div;
 
-	small = find_small_big(*stack_a, 0);
-	big = find_small_big(*stack_a, 2);
+	small = find_small_big(*stack_a, "sn");
+	big = find_small_big(*stack_a, "bn");
 	div = ((big - small) / 5);
 	interval(stack_a, stack_b, small, (small + div));
 	interval(stack_a, stack_b, (small + div + 1), (small + (div * 2)));
@@ -63,10 +63,10 @@ void			sort_hundred_less(t_stack **stack_a, t_stack **stack_b)
 	while (len != 0)
 	{
 		i = (*stack_b);
-		big = find_small_big(*stack_b, 2);
+		big = find_small_big(*stack_b, "bn");
 		while (i->num != big)
 		{
-			if (find_small_big(*stack_b, 3) <= (stack_len(*stack_b) / 2))
+			if (find_small_big(*stack_b, "bnp") <= (stack_len(*stack_b) / 2))
 				do_rb(*stack_b, 1);
 			else
 				do_rrb(*stack_b, 1);
