@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 15:56:24 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 14:53:08 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@
 static void     push_swap(t_stack **stack_a, t_stack **stack_b)
 {
     if (stack_len(*stack_a) <= 5)
-        sort_five_less(stack_a, stack_b);
+        five_less(stack_a, stack_b);
     else if (stack_len(*stack_a) <= 100)
-        sort_hundred_less(stack_a, stack_b);
+        hundred_less(stack_a, stack_b);
     else
-        sort_five_hundred_less(stack_a, stack_b);
+        five_hundred_less(stack_a, stack_b);
 }
 
 int             main(int argc, char **argv)

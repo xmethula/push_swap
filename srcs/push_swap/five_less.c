@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 09:15:50 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 14:53:31 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,7 +93,7 @@ static void		sort_five(t_stack **stack_a, t_stack **stack_b)
 	do_pa(stack_a, stack_b, 1);
 }
 
-void			sort_five_less(t_stack **stack_a, t_stack **stack_b)
+void			five_less(t_stack **stack_a, t_stack **stack_b)
 {
 	if (stack_len(*stack_a) == 2)
 		sort_two(*stack_a);

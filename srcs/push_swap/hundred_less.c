@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:54:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 12:43:43 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 14:53:55 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ static void		create_five_chunks(t_stack **stack_a, t_stack **stack_b)
 	interval(stack_a, stack_b, (small + (div * 4) + 1), big);
 }
 
-void			sort_hundred_less(t_stack **stack_a, t_stack **stack_b)
+void			hundred_less(t_stack **stack_a, t_stack **stack_b)
 {
 	int			big;
 	int			len;
