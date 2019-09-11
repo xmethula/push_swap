@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 14:27:49 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 16:32:55 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		main(int argc, char **argv)
 {
 	t_stack		*stack_a;
 	t_stack		*stack_b;
-	size_t		len;
+	int			len;
 
 	stack_a = NULL;
 	stack_b = NULL;
