@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/11 14:27:40 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/11 16:28:54 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/11 19:54:11 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,5 +52,6 @@ clean:
 
 fclean:
 	make fclean -C libft/
+	rm -f checker push_swap
 
 re:	fclean all
