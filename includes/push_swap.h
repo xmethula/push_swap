@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 10:44:19 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/11 15:20:41 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 16:30:37 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void		do_pb(t_stack **stack_a, t_stack **stack_b, int flag);
 void		fill_stack(int argc, char **argv, t_stack **stack);
 void		read_stdin(t_stack **stack_a, t_stack **stack_b);
 
-size_t		stack_len(t_stack *stack);
+int			stack_len(t_stack *stack);
 int			duplicates(t_stack *stack);
 int			is_sorted(t_stack *stack);
 
