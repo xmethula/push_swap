@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/11 14:27:40 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/11 16:13:17 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/11 16:19:04 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ P_SRC			= push_swap.c \
 all:
 	make -C libft/
 	gcc $(S_SRC_DIR)*.c $(C_SRC_DIR)*.c libft/libft.a -o checker
-	gcc srcs/shared/*.c srcs/push_swap/*.c libft/libft.a -o push_swap
+	gcc $(S_SRC_DIR)*.c $(P_SRC_DIR)*.c libft/libft.a -o push_swap
 
 clean:
 	make clean -C libft/
