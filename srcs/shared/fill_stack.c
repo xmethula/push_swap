@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fill_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 16:29:13 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/11 19:34:40 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,11 @@ void            fill_stack(int argc, char **argv, t_stack **stack)
     {
 		j = 0;
 		arr = ft_strsplit(argv[i], ' ');
+		if (arr[j] == NULL)
+		{
+			ft_putendl("Error");
+			exit(0);
+		}
 		while (arr[j] != NULL)
 		{
 			if (ft_isnbr(arr[j]) != 1)
