@@ -6,13 +6,13 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 08:32:59 by xmethula          #+#    #+#             */
-/*   Updated: 2019/07/16 08:34:36 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/12 11:16:28 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_endl(int	n)
+void	ft_putnbr_endl(int n)
 {
 	ft_putnbr(n);
 	ft_putchar('\n');
