@@ -6,7 +6,7 @@
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/11 14:27:40 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/11 19:54:11 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/12 08:38:41 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ P_SRC			= push_swap.c \
 				  find_small_big.c
 
 all:
-	make -C libft/
+	make re -C libft/
 	gcc $(CFLAGS) $(S_SRC_DIR)*.c $(C_SRC_DIR)*.c libft/libft.a -o checker
 	gcc $(CFLAGS) $(S_SRC_DIR)*.c $(P_SRC_DIR)*.c libft/libft.a -o push_swap
 
