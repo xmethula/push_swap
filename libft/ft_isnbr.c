@@ -6,24 +6,37 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 16:13:21 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 16:17:03 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/12 17:08:00 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isnbr(char *s)
+int			ft_isnbr(const char *s)
 {
-	int		i;
+	int		sign;
+	int		res;
 
-	i = 0;
-	while ((s[i] == '+') || (s[i] == '-'))
-		i++;
-	while (s[i] != '\0')
+	sign = 1;
+	res = 0;
+	while ((*s >= 9 && *s <= 13) || (*s == 32))
+		s++;
+	if ((*s == '-') || (*s == '+'))
 	{
-		if (ft_isdigit(s[i]) != 1)
-			return (0);
-		i++;
+		if (*s == '-')
+			sign = -1;
+		s++;
 	}
-	return (1);
+	if (!ft_isdigit(*s))
+		return (0);
+	while ((*s != '\0') && (*s >= '0') && (*s <= '9'))
+	{
+		res = res * 10 + (*s - '0');
+		s++;
+	}
+	if ((res * sign) >= -2147483648 && (res * sign) <= 2147483647
+		&& (ft_isdigit(*s) || (*s == '\0')))
+		return (1);
+	else
+		return (0);
 }
