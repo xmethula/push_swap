@@ -6,29 +6,29 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 16:09:11 by xmethula          #+#    #+#             */
-/*   Updated: 2019/08/19 08:46:40 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/12 10:26:02 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-int     duplicates(t_stack *stack)
+int				duplicates(t_stack *stack)
 {
-    t_stack     *p;
-    t_stack     *q;
+	t_stack		*p;
+	t_stack		*q;
 
-    p = stack;
-    while (p != NULL)
-    {
-        q = p->next;
-        while (q != NULL)
-        {
-            if (p->num == q->num)
-                return (1);
-            q = q->next;
-        }
-        p = p->next;
-    }
-    return (0);
+	p = stack;
+	while (p != NULL)
+	{
+		q = p->next;
+		while (q != NULL)
+		{
+			if (p->num == q->num)
+				return (1);
+			q = q->next;
+		}
+		p = p->next;
+	}
+	return (0);
 }

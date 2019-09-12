@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 16:38:52 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/10 08:55:22 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/12 11:02:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static int		big(t_stack *stack, char *flag)
 	return (0);
 }
 
-int			find_small_big(t_stack *stack, char *flag)
+int				find_small_big(t_stack *stack, char *flag)
 {
 	if (ft_strequ(flag, "sn"))
 		return (small(stack, flag));

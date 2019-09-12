@@ -6,14 +6,14 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/11 19:34:40 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/12 10:34:05 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-static void     add_end(t_stack **stack, long int num)
+static void		add_end(t_stack **stack, long int num)
 {
 	t_stack		*new;
 	t_stack		*p;
@@ -34,15 +34,15 @@ static void     add_end(t_stack **stack, long int num)
 	}
 }
 
-void            fill_stack(int argc, char **argv, t_stack **stack)
+void			fill_stack(int argc, char **argv, t_stack **stack)
 {
 	char		**arr;
-    int         i;
+	int			i;
 	int			j;
 
-    i = 1;
-    while (i < argc)
-    {
+	i = 1;
+	while (i < argc)
+	{
 		j = 0;
 		arr = ft_strsplit(argv[i], ' ');
 		if (arr[j] == NULL)
@@ -57,9 +57,9 @@ void            fill_stack(int argc, char **argv, t_stack **stack)
 				ft_putendl("Error");
 				exit(0);
 			}
-        	add_end(stack, ft_atoi(arr[j]));
-        	j++;
+			add_end(stack, ft_atoi(arr[j]));
+			j++;
 		}
 		i++;
-    }
+	}
 }
