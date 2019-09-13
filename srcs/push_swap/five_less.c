@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 17:00:15 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 11:06:05 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 10:57:36 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,30 +71,19 @@ static void		sort_five(t_stack **stack_a, t_stack **stack_b)
 	int			i;
 	t_stack		*p;
 
-	i = 0;
-	while (i < 2)
+	smallest = find_small_big(*stack_a, "sn");
+	p = (*stack_a);
+	while (p->num != smallest)
 	{
-		smallest = find_small_big(*stack_a, "sn");
-		p = (*stack_a);
-		while (p->num != smallest)
-		{
-			if (find_small_big(*stack_a, "snp") <= 2)
-				do_ra(*stack_a, 1);
-			else
-				do_rra(*stack_a, 1);
-		}
-		if ((is_sorted(*stack_a)) && (stack_len(*stack_b) == 0))
-			return ;
-		else if ((is_sorted(*stack_a)) && (stack_len(*stack_b) == 1))
-		{
-			do_pa(stack_a, stack_b, 1);
-			return ;
-		}
-		do_pb(stack_a, stack_b, 1);
-		i++;
+		if (find_small_big(*stack_a, "snp") <= 2)
+			do_ra(*stack_a, 1);
+		else
+			do_rra(*stack_a, 1);
 	}
-	sort_three(*stack_a);
-	do_pa(stack_a, stack_b, 1);
+	if ((is_sorted(*stack_a)) && (stack_len(*stack_b) == 0))
+		return ;
+	do_pb(stack_a, stack_b, 1);
+	sort_four(stack_a, stack_b);
 	do_pa(stack_a, stack_b, 1);
 }
 
