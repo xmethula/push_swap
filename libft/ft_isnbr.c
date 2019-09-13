@@ -6,7 +6,7 @@
 /*   By: xmethula <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 16:13:21 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 17:08:00 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 21:08:45 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int			ft_isnbr(const char *s)
 {
 	int		sign;
-	int		res;
+	long int	res;
 
 	sign = 1;
 	res = 0;
