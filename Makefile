@@ -5,53 +5,47 @@
 #                                                     +:+ +:+         +:+      #
 #    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/09/11 14:27:40 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/12 08:38:41 by xmethula         ###   ########.fr        #
+#    Created: 2019/09/13 07:44:52 by xmethula          #+#    #+#              #
+#    Updated: 2019/09/13 09:36:21 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CFLAGS			= -Wall -Werror -Wextra
+CHECKER			= checker
+PUSH_SWAP		= push_swap
 
-S_SRC_DIR		= srcs/shared/
-C_SRC_DIR		= srcs/checker/
-P_SRC_DIR		= srcs/push_swap/
+S_SRC			= srcs/shared/swap.c \
+				  srcs/shared/push.c \
+				  srcs/shared/rotate.c \
+				  srcs/shared/rev_rotate.c \
+				  srcs/shared/fill_stack.c \
+				  srcs/shared/stack_len.c \
+				  srcs/shared/duplicates.c \
+				  srcs/shared/is_sorted.c 
 
-S_SRC			= duplicates.c \
-				  is_sorted.c \
-				  stack_len.c \
-				  fill_stack.c \
-				  do_sa.c \
-				  do_sb.c \
-				  do_ss.c \
-				  do_ra.c \
-				  do_rb.c \
-				  do_rr.c \
-				  do_rra.c \
-				  do_rrb.c \
-				  do_rrr.c \
-				  do_pa.c \
-				  do_pb.c
+C_SRC			= srcs/checker/checker.c \
+				  srcs/checker/read_stdin.c 
 
-C_SRC			= checker.c \
-				  read_stdin.c 
+P_SRC			= srcs/push_swap/push_swap.c \
+				  srcs/push_swap/find_small_big.c \
+				  srcs/push_swap/five_less.c \
+				  srcs/push_swap/hundred_less.c \
+				  srcs/push_swap/five_hundred_less.c
 
-P_SRC			= push_swap.c \
-				  five_less.c \
-				  interval.c \
-				  hundred_less.c \
-				  five_hundred_less.c \
-				  find_small_big.c
+all: $(CHECKER) $(PUSH_SWAP)
 
-all:
+$(CHECKER):
 	make re -C libft/
-	gcc $(CFLAGS) $(S_SRC_DIR)*.c $(C_SRC_DIR)*.c libft/libft.a -o checker
-	gcc $(CFLAGS) $(S_SRC_DIR)*.c $(P_SRC_DIR)*.c libft/libft.a -o push_swap
+	gcc $(FLAGS) $(S_SRC) $(C_SRC) libft/libft.a -o $(CHECKER)
+
+$(PUSH_SWAP):
+	gcc $(FLAGS) $(S_SRC) $(P_SRC) libft/libft.a -o $(PUSH_SWAP)
 
 clean:
 	make clean -C libft/
 
 fclean:
 	make fclean -C libft/
-	rm -f checker push_swap
+	rm -f $(CHECKER) $(PUSH_SWAP)
 
-re:	fclean all
+re: fclean all
