@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/13 11:10:19 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 16:29:37 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,20 @@ static void		add_end(t_stack **stack, int num)
 	}
 }
 
+void			free_array(char **arr)
+{
+	int			i;
+
+	i = 0;
+	while (arr[i] != NULL)
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+	arr = NULL;
+}
+
 void			fill_stack(int argc, char **argv, t_stack **stack)
 {
 	char		**arr;
@@ -57,8 +71,10 @@ void			fill_stack(int argc, char **argv, t_stack **stack)
 				ft_putendl_fd("Error", 2);
 				exit(0);
 			}
-			add_end(stack, ft_atoi(arr[j++]));
+			add_end(stack, ft_atoi(arr[j]));
+			j++;
 		}
+		free_array(arr);
 		i++;
 	}
 }

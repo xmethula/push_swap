@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:59:50 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 11:00:13 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 16:57:57 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void		do_sa(t_stack *stack, int flag)
 {
 	int		tmp;
 
+	if (stack_len(stack) == 0)
+		return ;
 	if ((stack->next != NULL) && (stack->num != stack->next->num))
 	{
 		tmp = stack->num;
@@ -31,6 +33,8 @@ void		do_sb(t_stack *stack, int flag)
 {
 	int		tmp;
 
+	if (stack_len(stack) == 0)
+		return ;
 	if ((stack->next != NULL) && (stack->num != stack->next->num))
 	{
 		tmp = stack->num;
