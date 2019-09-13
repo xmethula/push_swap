@@ -6,14 +6,14 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/13 10:40:31 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 11:10:19 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
-static void		add_end(t_stack **stack, long int num)
+static void		add_end(t_stack **stack, int num)
 {
 	t_stack		*new;
 	t_stack		*p;
