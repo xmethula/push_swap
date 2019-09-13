@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/11 16:32:55 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 09:42:02 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		main(int argc, char **argv)
 		len = stack_len(stack_a);
 		if (duplicates(stack_a))
 		{
-			ft_putendl("Error");
+			ft_putendl_fd("Error", 2);
 			return (0);
 		}
 		read_stdin(&stack_a, &stack_b);

@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 11:09:28 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/13 09:43:36 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int				main(int argc, char **argv)
 		fill_stack(argc, argv, &stack_a);
 		if (duplicates(stack_a))
 		{
-			ft_putendl("Error");
+			ft_putendl_fd("Error", 2);
 			return (0);
 		}
 		if (is_sorted(stack_a))
