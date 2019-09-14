@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 10:44:19 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:38:55 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 16:48:49 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void					do_rrr(t_stack *stack_a, t_stack *stack_b, int flag);
 void					do_pa(t_stack **stack_a, t_stack **stack_b, int flag);
 void					do_pb(t_stack **stack_a, t_stack **stack_b, int flag);
 void					fill_stack(int argc, char **argv, t_stack **stack);
+void					print_error();
 int						stack_len(t_stack *stack);
 int						duplicates(t_stack *stack);
 int						is_sorted(t_stack *stack);
