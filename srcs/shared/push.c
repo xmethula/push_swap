@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:53:01 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 10:49:09 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:41:44 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 static void		stack_del_top(t_stack **stack)

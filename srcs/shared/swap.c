@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   swap.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:59:50 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/13 16:57:57 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:42:20 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 void		do_sa(t_stack *stack, int flag)

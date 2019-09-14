@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   read_stdin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/13 10:28:41 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:39:39 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 static void		do_swap(char *str, t_stack **stack_a, t_stack **stack_b)

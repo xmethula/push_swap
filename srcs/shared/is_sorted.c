@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   is_sorted.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/16 20:05:44 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 10:36:32 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:41:35 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 int				is_sorted(t_stack *stack)

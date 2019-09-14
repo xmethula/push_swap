@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   find_small_big.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/20 16:38:52 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 11:02:47 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:40:01 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 static int		small(t_stack *stack, char *flag)

@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   rev_rotate.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 15:15:16 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 10:54:08 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:41:52 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 void			do_rra(t_stack *stack, int flag)

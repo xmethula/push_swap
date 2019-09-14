@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   five_hundred_less.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 08:35:33 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 11:04:45 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:40:12 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 static void		create_eleven_chunks(t_stack **stack_a, t_stack **stack_b)

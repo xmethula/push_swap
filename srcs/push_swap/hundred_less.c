@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   hundred_less.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/06 14:54:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/12 10:18:04 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/14 16:40:30 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../libft/libft.h"
 #include "../../includes/push_swap.h"
 
 void			range(t_stack **a, t_stack **b, int min, int max)
