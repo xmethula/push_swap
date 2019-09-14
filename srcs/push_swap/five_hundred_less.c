@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 08:35:33 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:40:12 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 23:27:28 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,21 @@ void			five_hundred_less(t_stack **stack_a, t_stack **stack_b)
 {
 	int			big;
 	int			len;
-	t_stack		*i;
+	t_stack		*p;
 
 	create_eleven_chunks(stack_a, stack_b);
 	len = stack_len(*stack_b);
 	while (len != 0)
 	{
-		i = (*stack_b);
+		p = (*stack_b);
 		big = find_small_big(*stack_b, "bn");
-		while (i->num != big)
+		while (p->num != big)
 		{
 			if (find_small_big(*stack_b, "bnp") <= (stack_len(*stack_b) / 2))
-				do_rb(*stack_b, 1);
+				do_rb(stack_b, 1);
 			else
-				do_rrb(*stack_b, 1);
+				do_rrb(stack_b, 1);
+			p = (*stack_b);
 		}
 		do_pa(stack_a, stack_b, 1);
 		len--;

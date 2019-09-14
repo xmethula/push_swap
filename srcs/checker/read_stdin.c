@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 17:25:34 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 22:26:31 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ static void		do_steps(char *str, t_stack **stack_a, t_stack **stack_b)
 	else if (ft_strequ(str, "pb"))
 		do_pb(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "ra"))
-		do_ra(*stack_a, 0);
+		do_ra(stack_a, 0);
 	else if (ft_strequ(str, "rb"))
-		do_rb(*stack_b, 0);
+		do_rb(stack_b, 0);
 	else if (ft_strequ(str, "rr"))
-		do_rr(*stack_a, *stack_b, 0);
+		do_rr(stack_a, stack_b, 0);
 	else if (ft_strequ(str, "rra"))
-		do_rra(*stack_a, 0);
+		do_rra(stack_a, 0);
 	else if (ft_strequ(str, "rrb"))
-		do_rrb(*stack_b, 0);
+		do_rrb(stack_b, 0);
 	else if (ft_strequ(str, "rrr"))
-		do_rrr(*stack_a, *stack_b, 0);
+		do_rrr(stack_a, stack_b, 0);
 	else
 		print_error();
 }

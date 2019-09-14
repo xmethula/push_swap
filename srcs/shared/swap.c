@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:59:50 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:42:20 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 17:46:42 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void		do_sa(t_stack *stack, int flag)
 
 	if (stack_len(stack) == 0)
 		return ;
-	if ((stack->next != NULL) && (stack->num != stack->next->num))
+	if (stack->next != NULL)
 	{
 		tmp = stack->num;
 		stack->num = stack->next->num;
@@ -34,7 +34,7 @@ void		do_sb(t_stack *stack, int flag)
 
 	if (stack_len(stack) == 0)
 		return ;
-	if ((stack->next != NULL) && (stack->num != stack->next->num))
+	if (stack->next != NULL)
 	{
 		tmp = stack->num;
 		stack->num = stack->next->num;

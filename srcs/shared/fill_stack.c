@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 17:13:58 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 17:49:27 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ static void		add_end(t_stack **stack, int num)
 
 	new = (t_stack *)malloc(sizeof(t_stack));
 	new->num = num;
-	new->prev = NULL;
 	new->next = NULL;
 	if (*stack == NULL)
 		(*stack) = new;
@@ -29,7 +28,6 @@ static void		add_end(t_stack **stack, int num)
 		while (p->next != NULL)
 			p = p->next;
 		p->next = new;
-		new->prev = p;
 	}
 }
 

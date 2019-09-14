@@ -6,60 +6,29 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:53:01 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:41:44 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 21:38:27 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-static void		stack_del_top(t_stack **stack)
-{
-	t_stack		*tmp;
-
-	if ((*stack) != NULL)
-	{
-		if (stack_len(*stack) == 1)
-			ft_memdel((void **)stack);
-		else
-		{
-			tmp = (*stack);
-			(*stack) = tmp->next;
-			(*stack)->prev = NULL;
-			tmp->next = NULL;
-			free(tmp);
-		}
-	}
-}
-
-static void		stack_add_top(t_stack **stack, int num)
-{
-	t_stack		*new;
-	t_stack		*tmp;
-
-	new = (t_stack *)malloc(sizeof(t_stack));
-	new->num = num;
-	new->prev = NULL;
-	new->next = NULL;
-	if (*stack == NULL)
-		(*stack) = new;
-	else
-	{
-		tmp = (*stack);
-		new->next = tmp;
-		tmp->prev = new;
-		(*stack) = new;
-	}
-}
-
 void			do_pa(t_stack **stack_a, t_stack **stack_b, int flag)
 {
-	int			tmp;
+	t_stack		*tmp_b;
+	t_stack		*tmp_a;
 
-	if ((*stack_b) != NULL)
+	tmp_b = (*stack_b);
+	if (stack_len(*stack_b) == 0)
+		return ;
+	(*stack_b) = tmp_b->next;
+	tmp_b->next = NULL;
+	if (*stack_a == NULL)
+		*stack_a = tmp_b;
+	else
 	{
-		tmp = (*stack_b)->num;
-		stack_del_top(stack_b);
-		stack_add_top(stack_a, tmp);
+		tmp_a = (*stack_a);
+		tmp_b->next = tmp_a;
+		(*stack_a) = tmp_b;
 	}
 	if (flag)
 		ft_putendl("pa");
@@ -67,14 +36,22 @@ void			do_pa(t_stack **stack_a, t_stack **stack_b, int flag)
 
 void			do_pb(t_stack **stack_a, t_stack **stack_b, int flag)
 {
-	int			tmp;
+	t_stack		*tmp_a;
+	t_stack		*tmp_b;
 
-	if ((*stack_a) != NULL)
+	tmp_a = (*stack_a);
+	if (stack_len(*stack_a) == 0)
+		return ;
+	(*stack_a) = tmp_a->next;
+	tmp_a->next = NULL;
+	if (*stack_b == NULL)
+		*stack_b = tmp_a;
+	else
 	{
-		tmp = (*stack_a)->num;
-		stack_del_top(stack_a);
-		stack_add_top(stack_b, tmp);
+		tmp_b = (*stack_b);
+		tmp_a->next = tmp_b;
+		(*stack_b) = tmp_a;
 	}
-	if (flag)
-		ft_putendl("pb");
+		if (flag)
+			ft_putendl("pb");
 }
