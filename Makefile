@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: xmethula <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: ray <ray@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/13 07:44:52 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/13 11:29:42 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/14 17:10:14 by ray              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,10 +21,11 @@ S_SRC			= srcs/shared/swap.c \
 				  srcs/shared/fill_stack.c \
 				  srcs/shared/stack_len.c \
 				  srcs/shared/duplicates.c \
-				  srcs/shared/is_sorted.c 
+				  srcs/shared/is_sorted.c  \
+				  srcs/shared/print_error.c
 
 C_SRC			= srcs/checker/checker.c \
-				  srcs/checker/read_stdin.c 
+				  srcs/checker/read_stdin.c
 
 P_SRC			= srcs/push_swap/push_swap.c \
 				  srcs/push_swap/find_small_big.c \
