@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:40:40 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 17:12:57 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,7 @@ int				main(int argc, char **argv)
 	{
 		fill_stack(argc, argv, &stack_a);
 		if (duplicates(stack_a))
-		{
-			ft_putendl_fd("Error", 2);
-			return (0);
-		}
+			print_error();
 		if (is_sorted(stack_a))
 			return (0);
 		push_swap(&stack_a, &stack_b);

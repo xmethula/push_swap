@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 14:23:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:41:24 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 17:13:58 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,17 +59,11 @@ void			fill_stack(int argc, char **argv, t_stack **stack)
 		j = 0;
 		arr = ft_strsplit(argv[i], ' ');
 		if (arr[j] == NULL)
-		{
-			ft_putendl_fd("Error", 2);
-			exit(0);
-		}
+			print_error();
 		while (arr[j] != NULL)
 		{
 			if (ft_isnbr(arr[j]) != 1)
-			{
-				ft_putendl_fd("Error", 2);
-				exit(0);
-			}
+				print_error();
 			add_end(stack, ft_atoi(arr[j]));
 			j++;
 		}

@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:39:39 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 17:12:11 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,6 @@ void			read_stdin(t_stack **stack_a, t_stack **stack_b)
 			|| ft_strequ(line, "rrr"))
 			do_rev_rotate(line, stack_a, stack_b);
 		else
-		{
-			ft_putendl_fd("Error", 2);
-			exit(0);
-		}
+			print_error();
 	}
 }
