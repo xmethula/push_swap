@@ -6,7 +6,7 @@
 /*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 10:44:19 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 16:48:49 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/14 21:44:40 by ray              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,18 @@
 typedef struct			s_stack
 {
 	int					num;
-	struct s_stack		*prev;
 	struct s_stack		*next;
 }						t_stack;
 
 void					do_sa(t_stack *stack, int flag);
 void					do_sb(t_stack *stack, int flag);
 void					do_ss(t_stack *stack_a, t_stack *stack_b, int flag);
-void					do_ra(t_stack *stack, int flag);
-void					do_rb(t_stack *stack, int flag);
-void					do_rr(t_stack *stack_a, t_stack *stack_b, int flag);
-void					do_rra(t_stack *stack, int flag);
-void					do_rrb(t_stack *stack, int flag);
-void					do_rrr(t_stack *stack_a, t_stack *stack_b, int flag);
+void					do_ra(t_stack **stack, int flag);
+void					do_rb(t_stack **stack, int flag);
+void					do_rr(t_stack **stack_a, t_stack **stack_b, int flag);
+void					do_rra(t_stack **stack, int flag);
+void					do_rrb(t_stack **stack, int flag);
+void					do_rrr(t_stack **stack_a, t_stack **stack_b, int flag);
 void					do_pa(t_stack **stack_a, t_stack **stack_b, int flag);
 void					do_pb(t_stack **stack_a, t_stack **stack_b, int flag);
 void					fill_stack(int argc, char **argv, t_stack **stack);
