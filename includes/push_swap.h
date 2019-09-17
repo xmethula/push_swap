@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 10:44:19 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 21:44:40 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/17 07:46:08 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "../libft/libft.h"
+# include "../libft/libft.h"
 
 typedef struct			s_stack
 {
