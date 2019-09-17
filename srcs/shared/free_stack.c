@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   free_stack.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/15 12:41:12 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/17 09:16:23 by xmethula         ###   ########.fr       */
+/*   Created: 2019/09/17 09:10:09 by xmethula          #+#    #+#             */
+/*   Updated: 2019/09/17 09:14:11 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int		main(int argc, char **argv)
+void			free_stack(t_stack **stack)
 {
-	t_stack		*stack_a;
-	t_stack		*stack_b;
-	int			len;
+	t_stack		*current;
+	t_stack		*p;
 
-	stack_a = NULL;
-	stack_b = NULL;
-	if (argc > 1)
+	current = (*stack);
+	while (current != NULL)
 	{
-		fill_stack(argc, argv, &stack_a);
-		len = stack_len(stack_a);
-		if (duplicates(stack_a))
-			print_error();
-		read_stdin(&stack_a, &stack_b);
-		if (is_sorted(stack_a) && (stack_len(stack_a) == len))
-			ft_putendl("OK");
-		else
-			ft_putendl("KO");
+		p = current->next;
+		free(current);
+		current = p;
 	}
-	free_stack(&stack_a);
-	free_stack(&stack_b);
-	return (0);
+	(*stack) = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/17 15:13:47 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/17 08:51:19 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:57:05 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ void			read_stdin(t_stack **stack_a, t_stack **stack_b)
 	{
 		do_steps(line, stack_a, stack_b);
 		free(line);
+		line = NULL;
 	}
 }

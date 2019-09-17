@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/19 09:06:37 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/17 07:33:36 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/17 09:17:00 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,7 @@ int				main(int argc, char **argv)
 			return (0);
 		push_swap(&stack_a, &stack_b);
 	}
+	free_stack(&stack_a);
+	free_stack(&stack_b);
 	return (0);
 }
