@@ -6,7 +6,7 @@
 /*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 17:03:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/17 07:50:47 by xmethula         ###   ########.fr       */
+/*   Updated: 2019/09/17 08:27:46 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	print_error(void)
 {
-	ft_putendl_fd("error", 2);
+	ft_putendl_fd("Error", 2);
 	exit(0);
 }
