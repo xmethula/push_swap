@@ -6,7 +6,7 @@
 #    By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/13 07:44:52 by xmethula          #+#    #+#              #
-#    Updated: 2019/09/17 07:28:18 by xmethula         ###   ########.fr        #
+#    Updated: 2019/09/17 09:18:43 by xmethula         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ S_SRC			= srcs/shared/swap.c \
 				  srcs/shared/stack_len.c \
 				  srcs/shared/duplicates.c \
 				  srcs/shared/is_sorted.c  \
-				  srcs/shared/print_error.c
+				  srcs/shared/print_error.c \
+				  srcs/shared/free_stack.c
 
 C_SRC			= srcs/checker/checker.c \
 				  srcs/checker/read_stdin.c
