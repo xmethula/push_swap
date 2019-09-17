@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 14:53:01 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 21:38:27 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/17 07:48:59 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,6 @@ void			do_pb(t_stack **stack_a, t_stack **stack_b, int flag)
 		tmp_a->next = tmp_b;
 		(*stack_b) = tmp_a;
 	}
-		if (flag)
-			ft_putendl("pb");
+	if (flag)
+		ft_putendl("pb");
 }

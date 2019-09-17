@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   print_error.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ray <ray@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: xmethula <xmethula@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 17:03:58 by xmethula          #+#    #+#             */
-/*   Updated: 2019/09/14 17:16:55 by ray              ###   ########.fr       */
+/*   Updated: 2019/09/17 07:50:47 by xmethula         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void		print_error()
+void	print_error(void)
 {
 	ft_putendl_fd("error", 2);
 	exit(0);
